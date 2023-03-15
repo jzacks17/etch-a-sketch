@@ -10,7 +10,7 @@ let row;
 // create a variable of type let called pixel. Do not assign an initial value. This variable will be used to create the pixel divs.
 let pixel;
 
-// for loop starting at i = 1, while i is less than or equal to size, incrementing i by one
+//For loop to create each row of the grid (loop from 1 to size)
 for (let i = 1; i <= size; i++) {
 
     //set the value of row to equal a new div element 
@@ -20,7 +20,7 @@ for (let i = 1; i <= size; i++) {
     //append the row div element to the container div
     container.appendChild(row);
 
-    //for loop starting at j = 1, while j is less than or equal to size, incrementing j by one
+    //for loop to create each pixel in the row (loop from 1 to size)
     for (let j = 1; j <= size; j++) {
 
         //set the value of pixel to equal a new div element
@@ -31,13 +31,3 @@ for (let i = 1; i <= size; i++) {
         row.appendChild(pixel);
     }
 }
-
-
-
-//     for loop starting at j = 1, while j is less than or equal to size, incrementing j by one
-
-//         set the value of pixel to equal a new div element
-
-//         add the class 'pixel' to the row div element
-
-//         append the pixel div element to the current row div
