@@ -35,13 +35,15 @@ for (let i = 1; i <= size; i++) {
 // create a variable of type const called pixels which is equal to all the pixel divs (querySelectorAll)
 const pixels = document.querySelectorAll('.pixel');
 
-// add eventlistener for each pixel of pixels. On click, run the function changeColour. 
-pixels.forEach(pix => pix.addEventListener('mouseenter', function(){
-    this.style.backgroundColor = 'black';
-}))
+// add eventlistener for each pixel of pixels. On hover, change the background color to black 
+pixels.forEach(pixel => pixel.addEventListener('mouseover', changeColour));
 
-// // add eventlistener for each pixel of pixels. On click, run the function changeColour. 
-// pixels.forEach(pix => pix.addEventListener('mouseleave', function(){
-//     this.style.backgroundColor = 'white';
-// }))
+    
+function changeColour(){
+    this.style.backgroundColor = 'black';
+}
+
+
+
+
 
