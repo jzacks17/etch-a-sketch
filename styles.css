@@ -3,6 +3,23 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    /* Add flex box to the entire body */
+    display: flex;
+    flex-direction: column;
+
+    background-color: lightgrey;
+
+    flex: auto;
+}
+
+h1{
+    text-align: center;
+   
+}
+
 .page{
 
     display: flex;
@@ -18,7 +35,7 @@
     border: 0.2em solid #020222;
 
     /* set the width to be half the page with equal height */
-    width: 100%;
+    width: 75%;
     aspect-ratio: 1 / 1;
 
 }
@@ -63,9 +80,9 @@
     width: 100%;
     height: 15px;
     border-radius: 5px;
-    background: #d3d3d3;
+    background: #383838;
     outline: none;
-    opacity: 0.7;
+    opacity: 0.9;
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
@@ -76,6 +93,6 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #01001a;
+    background: #000000;
     cursor: pointer;
 }

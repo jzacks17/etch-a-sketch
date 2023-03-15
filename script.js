@@ -2,7 +2,7 @@
 const container = document.querySelector('.container');
 
 // create a variable of type const called size. This variable will store the dimension of the etch a sketch grid
-const size = 64;
+const size = 16;
 
 // create a variable of type let called row. Do not assign an initial value. This variable will be used to create the row divs. 
 let row;
