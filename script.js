@@ -18,6 +18,9 @@ let pixels;
 // create a variable of type const called slider. Assign an initial value of the slider element 
 const slider = document.querySelector('.slider');
 
+//create a variable of type const called clear. Assign a value of the clear button
+const button = document.getElementById("clear");
+
 
 // ----------------------------------------------- Create Grid section------------------------------------------------------
 
@@ -37,6 +40,12 @@ slider.oninput = function () {
     //call createGrid function to re-size the grid
     createGrid(size);
 }
+
+//add event listener to clear button
+button.addEventListener('click', function(){    
+    //change background colour to white for all pixels
+    pixels.forEach(pixel => pixel.style.backgroundColor = 'white');
+})
 
 //-------------------------------------------------Function Section ------------------------------------------------
 
