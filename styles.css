@@ -1,0 +1,21 @@
+/* Change all box sizing to border box */
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.pixel{
+    height: 24px;
+    width: 24px;
+
+    border: 1px solid black;
+}

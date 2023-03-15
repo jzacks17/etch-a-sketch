@@ -1,4 +1,4 @@
-create a variable of type const equal to the container div (document.querySelector)
+create a variable of type const called container equal to the container div (document.querySelector)
 
 create a variable of type const called size. This variable will store the dimension of the etch a sketch grid
 
