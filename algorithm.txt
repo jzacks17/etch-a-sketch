@@ -6,41 +6,50 @@ create a variable of type let called row. Do not assign an initial value. This v
 
 create a variable of type let called pixel. Do not assign an initial value. This variable will be used to create the pixel divs.
 
+create a variable of type let called pixels which is equal to all the pixel divs. Do not assign an initial value, assigned on grid creation.
+
 create a variable of type const called slider. Assign an initial value of the slider element (document.querySelector('.slider'))
 
-Add event listener to the slider. On input, call the changeGrid() function
 
-for loop starting at i = 1, while i is less than or equal to size, incrementing i by one
+Create the default grid by calling createGrid and passing it the initial value for size
 
-    set the value of row to equal a new div element 
 
-    add the class 'row' to the row div element
+On input for the slider perform the following:
+    ->set size equal to the slider value
 
-    append the row div element to the container div
+    ->set the dimensions inner text to be the size
 
-    for loop starting at j = 1, while j is less than or equal to size, incrementing j by one
+    ->call createGrid function to re-size the grid, passing it size as the argument
 
-        set the value of pixel to equal a new div element 
 
-        add the class 'pixel' to the row div element
-
-        append the pixel div element to the current row div
-
-    end
-
-end
-
-create a variable of type const called pixels which is equal to all the pixel divs (querySelectorAll)
-
-Add eventlistener for each pixel of pixels. On hover, run the changeColour function
 
 function: changeColour()
 Function that changes the colour of a pixel when it is hovered over
 
-function: changeGrid()
-Function that changes the grid size when the slider is moved
+function: createGrid()
+Function that creates the grid, taking a single input (the size)
 
-set size equal to the value of the slider 
+    -> remove all the children nodes from the container element
 
-set the dimensions inner text to be the size
+    ->for loop starting at i = 1, while i is less than or equal to size, incrementing i by one
+
+        ->set the value of row to equal a new div element 
+
+        ->add the class 'row' to the row div element
+
+        ->append the row div element to the container div
+
+        ->for loop starting at j = 1, while j is less than or equal to size, incrementing j by one
+
+            ->set the value of pixel to equal a new div element 
+
+            ->add the class 'pixel' to the row div element
+
+            ->append the pixel div element to the current row div
+
+
+    -> set value of pixels to all the pixels
+
+    -> Add eventlistener for each pixel of pixels. On hover, run the changeColour function
+
 
