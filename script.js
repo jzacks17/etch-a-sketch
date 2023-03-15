@@ -2,7 +2,7 @@
 const container = document.querySelector('.container');
 
 // create a variable of type const called size. This variable will store the dimension of the etch a sketch grid
-const size = 16;
+const size = 64;
 
 // create a variable of type let called row. Do not assign an initial value. This variable will be used to create the row divs. 
 let row;
@@ -31,3 +31,17 @@ for (let i = 1; i <= size; i++) {
         row.appendChild(pixel);
     }
 }
+
+// create a variable of type const called pixels which is equal to all the pixel divs (querySelectorAll)
+const pixels = document.querySelectorAll('.pixel');
+
+// add eventlistener for each pixel of pixels. On click, run the function changeColour. 
+pixels.forEach(pix => pix.addEventListener('mouseenter', function(){
+    this.style.backgroundColor = 'black';
+}))
+
+// // add eventlistener for each pixel of pixels. On click, run the function changeColour. 
+// pixels.forEach(pix => pix.addEventListener('mouseleave', function(){
+//     this.style.backgroundColor = 'white';
+// }))
+
