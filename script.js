@@ -42,7 +42,7 @@ slider.oninput = function () {
 
 //function that changes the colour of a pixel when it is hovered over
 function changeColour() {
-    this.style.backgroundColor = 'black';
+    this.style.backgroundColor = document.getElementById("colourpicker").value;
 }
 
 function createGrid(n) {
