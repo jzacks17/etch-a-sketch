@@ -1,10 +1,14 @@
 create a variable of type const called container equal to the container div (document.querySelector)
 
-create a variable of type const called size. This variable will store the dimension of the etch a sketch grid
+create a variable of type let called size. This variable will store the dimension of the etch a sketch grid. Assign an initial value of 32.
 
 create a variable of type let called row. Do not assign an initial value. This variable will be used to create the row divs. 
 
 create a variable of type let called pixel. Do not assign an initial value. This variable will be used to create the pixel divs.
+
+create a variable of type const called slider. Assign an initial value of the slider element (document.querySelector('.slider'))
+
+Add event listener to the slider. On input, call the changeGrid() function
 
 for loop starting at i = 1, while i is less than or equal to size, incrementing i by one
 
@@ -28,5 +32,15 @@ end
 
 create a variable of type const called pixels which is equal to all the pixel divs (querySelectorAll)
 
-add eventlistener for each pixel of pixels. On hover, change the background color to black 
+Add eventlistener for each pixel of pixels. On hover, run the changeColour function
+
+function: changeColour()
+Function that changes the colour of a pixel when it is hovered over
+
+function: changeGrid()
+Function that changes the grid size when the slider is moved
+
+set size equal to the value of the slider 
+
+set the dimensions inner text to be the size
 
