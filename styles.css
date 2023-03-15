@@ -68,6 +68,24 @@ h1{
 
 }
 
+.colour{
+
+    margin-bottom: 10em;
+    border-radius: 50px;
+    
+}
+
+input{
+
+    height: 5em;
+    width: 5em;
+
+    border-radius: 1em;
+
+    content: fill;
+    background-color: none;
+}
+
 .dimension{
     font-size: 200%;
     font: times;
