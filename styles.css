@@ -70,7 +70,7 @@ h1{
 
 .colour{
 
-    margin-bottom: 10em;
+    margin-bottom: 5em;
     border-radius: 50px;
     
 }
@@ -84,6 +84,20 @@ input{
 
     content: fill;
     background-color: none;
+}
+
+.clearButton{
+    margin-bottom: 5em;
+}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #383838;
+    font:times;
+    padding: 0.5em;
+    border: 0.1em solid  black;
+    border-radius: 0.3em;
 }
 
 .dimension{
