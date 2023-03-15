@@ -12,7 +12,7 @@ let row;
 // create a variable of type let called pixel. Do not assign an initial value. This variable will be used to create the pixel divs.
 let pixel;
 
-// create a variable of type let called pixels which is equal to all the pixel divs. Do not assign an initial value. 
+// create a variable of type let called pixels which is equal to all the pixel divs. Do not assign an initial value, assigned on grid creation.
 let pixels;
 
 // create a variable of type const called slider. Assign an initial value of the slider element 
@@ -21,13 +21,14 @@ const slider = document.querySelector('.slider');
 
 // ----------------------------------------------- Create Grid section------------------------------------------------------
 
-//create the defualt grid
+//Create the default grid by calling createGrid and passing it the initial value for size
 createGrid(size);
 
 
 //On input for slider:
 slider.oninput = function () {
-
+    
+    //set size equal to the slider value
     size = slider.value;
 
     //set the dimensions inner text to be the size
