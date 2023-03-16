@@ -21,6 +21,12 @@ const slider = document.querySelector('.slider');
 //create a variable of type const called clear. Assign a value of the clear button
 const button = document.getElementById("clear");
 
+//create a variable of type const called rainbow. Assign a value of the rainbow mode switch
+const rainbow = document.getElementById("rainbowMode");
+
+//create a variable of type let called rainbowMode. Assign an initial value of 'off'. Used to check if rainbow mode is on or off
+let rainbowMode = 'off';
+
 
 // ----------------------------------------------- Create Grid section------------------------------------------------------
 
@@ -47,11 +53,37 @@ button.addEventListener('click', function(){
     pixels.forEach(pixel => pixel.style.backgroundColor = 'white');
 })
 
+
+//add event listener to rainbow switch. On click switch variable to on/off
+rainbow.addEventListener('click', function(e){
+    if(rainbowMode == 'off'){
+        rainbowMode = 'on';
+        return;
+    }
+    else{
+        rainbowMode ='off';
+        return;
+    }
+})
+
 //-------------------------------------------------Function Section ------------------------------------------------
 
 //function that changes the colour of a pixel when it is hovered over
 function changeColour() {
-    this.style.backgroundColor = document.getElementById("colourpicker").value;
+
+    //check to see if rainbow mode is selected
+    if(rainbowMode == 'on'){
+
+        //if rainbow mode is selected call a random function three times to generate rgb colour
+        this.style.backgroundColor = `rgb(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)})`
+
+    }
+    
+    //If not selected, set the colour to the colour picker 
+    else{
+        this.style.backgroundColor = document.getElementById("colourpicker").value;
+    }
+    
 }
 
 function createGrid(n) {
@@ -91,3 +123,7 @@ function createGrid(n) {
 }
 
 
+//Function that generates a random number between the low and high parameters
+function random(low = 0, high) {
+    return low + Math.round(Math.random() * (high - low));
+}
