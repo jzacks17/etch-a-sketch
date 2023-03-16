@@ -15,13 +15,13 @@ body {
     flex: auto;
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: 300%;
-   
+
 }
 
-.page{
+.page {
 
     display: flex;
     flex-direction: row-reverse;
@@ -59,7 +59,7 @@ h1{
 }
 
 /* styyling for the control side of the page */
-.controls{
+.controls {
     display: flex;
     flex-direction: column;
 
@@ -70,14 +70,14 @@ h1{
 
 }
 
-.colour{
+.colour {
 
-    margin-bottom: 5em;
+    /* margin-bottom: 3em; */
     border-radius: 50px;
-    
+
 }
 
-input{
+input.colourP {
 
     height: 5em;
     width: 5em;
@@ -88,21 +88,104 @@ input{
     background-color: none;
 }
 
-.clearButton{
+/* Styling for rainbow switch */
+/* The switch - the box around the slider */
+
+.rainbowContainer{
+    margin: 3em 0em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+p.label{
+    font-size: 1em;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 5.5em;
+    height: 2em;
+
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider for the rainbow*/
+.rainbow {
+
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+}
+
+.rainbow:before {
+    position: absolute;
+    content: "";
+    height: 1.5em;
+    width: 1.5em;
+    left: 0.25em;
+    bottom: 0.25em;
+    background-color: #252525;
+    -webkit-transition: .7s;
+    transition: .7s;
+  }
+  
+  input:checked + .rainbow{
+    background-color: #383838;
+  }
+  
+  input:focus + .rainbow {
+    box-shadow: 0 0 1px #383838;
+  }
+  
+  input:checked + .rainbow:before {
+    -webkit-transform: translateX(3.25em);
+    -ms-transform: translateX(3.25em);
+    transform: translateX(3.25em);
+  }
+  
+  /* Rounded sliders */
+  .rainbow.round {
+    border-radius: 34px;
+  }
+  
+  .rainbow.round:before {
+    border-radius: 50%;
+  }
+
+
+.clearButton {
     margin-bottom: 5em;
 }
 
-button{
+button {
     font-size: 1.5em;
     font-weight: bold;
     background-color: #383838;
-    font:times;
+    font: times;
     padding: 0.5em;
-    border: 0.1em solid  black;
+    border: 0.1em solid black;
     border-radius: 0.3em;
 }
 
-.dimension{
+.dimension {
     font-size: 200%;
     font: times;
 }
