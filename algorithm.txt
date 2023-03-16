@@ -26,6 +26,11 @@ On input for the slider perform the following:
 function: changeColour()
 Function that changes the colour of a pixel when it is hovered over
 
+check to see if rainbow mode is selected
+    -> if rainbow mode is selected call a random function three times to generate rgb colour
+
+    -> if it is not selected set the colour equal to the selected colour in the colour wheel
+
 function: createGrid()
 Function that creates the grid, taking a single input (the size)
 
