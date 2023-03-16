@@ -75,7 +75,7 @@ function changeColour() {
     if(rainbowMode == 'on'){
 
         //if rainbow mode is selected call a random function three times to generate rgb colour
-        this.style.backgroundColor = `rgb(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)})`
+        this.style.backgroundColor = `rgb(${random(100, 255)}, ${random(100, 255)}, ${random(100, 255)})`
 
     }
     
